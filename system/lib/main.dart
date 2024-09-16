@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:system/app/theme.dart';
+import 'package:system/widgets/system_scaffold.dart';
 
 void main() {
-  runApp(const MainApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const SystemApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+/// The System App.
+@immutable
+class SystemApp extends StatelessWidget {
+  /// Creates a const [SystemApp].
+  const SystemApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: getThemeData(),
+      home: const SystemScaffold(
+        body: Text('Hello World!'),
       ),
     );
   }

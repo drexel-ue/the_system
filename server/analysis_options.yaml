@@ -4,4 +4,6 @@ analyzer:
     - build/**
 linter:
   rules:
-    file_names: false
+    - public_member_api_docs
+    - prefer_const_constructors
+    - prefer_const_constructors_in_immutables
