@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:system/app/routing.dart';
 import 'package:system/app/theme.dart';
-import 'package:system/widgets/system_scaffold.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,10 +17,10 @@ class SystemApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'System',
       theme: getThemeData(),
-      home: const SystemScaffold(
-        body: Text('Hello World!'),
-      ),
+      initialRoute: '/',
+      routes: routes,
     );
   }
 }

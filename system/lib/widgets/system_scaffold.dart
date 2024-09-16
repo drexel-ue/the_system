@@ -17,6 +17,7 @@ class SystemScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: SystemColors.surface,
       body: SafeArea(
         child: Padding(
           padding: allPadding16,
