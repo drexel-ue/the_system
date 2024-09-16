@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:system/app/layout.dart';
-import 'package:system/util/create_route.dart';
 import 'package:system/widgets/system_button.dart';
 import 'package:system/widgets/system_scaffold.dart';
 
@@ -15,12 +14,7 @@ class SignUpPage extends StatelessWidget {
 
   /// Pushes the sign up page.
   static Future<T?> push<T extends Object?>(BuildContext context) async {
-    return Navigator.of(context).push(
-      createRoute(
-        path,
-        (BuildContext context) => const SignUpPage(),
-      ),
-    );
+    return await Navigator.of(context).pushNamed(path);
   }
 
   @override

@@ -20,7 +20,7 @@ class SystemApp extends StatelessWidget {
       title: 'System',
       theme: getThemeData(),
       initialRoute: '/',
-      routes: routes,
+      onGenerateRoute: onGenerateRoute,
     );
   }
 }
