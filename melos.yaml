@@ -1,0 +1,20 @@
+name: the_system
+
+packages:
+  - common
+  - server
+  - system
+
+scripts:
+  analyze:
+    run: |
+      melos exec -- \
+        dart analyze --fatal-infos
+  format:
+    run: |
+      melos exec -- \
+        dart format --line-length 100 --output=none --set-exit-if-changed .
+  test:
+    run: |
+      melos exec -- \
+        dart test
